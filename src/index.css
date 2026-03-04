@@ -160,26 +160,28 @@
   }
 
   .header-nav-item {
-    @apply relative px-4 py-2 text-sm font-medium transition-all duration-300 cursor-pointer;
+    @apply relative px-6 py-3 text-base font-semibold transition-all duration-300 cursor-pointer tracking-wide;
     color: hsl(200 10% 55%);
   }
   .header-nav-item:hover {
-    color: hsl(185 100% 50%);
-    text-shadow: 0 0 8px hsl(185 100% 50% / 0.4);
+    color: hsl(185 100% 60%);
+    text-shadow: 0 0 10px hsl(185 100% 50% / 0.5);
+    background: hsl(185 100% 50% / 0.04);
   }
   .header-nav-item.active {
-    color: hsl(185 100% 50%);
-    text-shadow: 0 0 12px hsl(185 100% 50% / 0.6);
+    color: hsl(185 100% 55%);
+    text-shadow: 0 0 14px hsl(185 100% 50% / 0.7);
+    background: hsl(185 100% 50% / 0.06);
   }
   .header-nav-item.active::after {
     content: '';
     position: absolute;
-    bottom: -1px;
-    left: 10%;
-    right: 10%;
+    bottom: 0;
+    left: 15%;
+    right: 15%;
     height: 2px;
-    background: hsl(185 100% 50%);
-    box-shadow: 0 0 8px hsl(185 100% 50% / 0.6);
+    background: linear-gradient(90deg, transparent, hsl(185 100% 50%), transparent);
+    box-shadow: 0 0 12px hsl(185 100% 50% / 0.7);
     border-radius: 1px;
   }
 

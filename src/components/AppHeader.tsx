@@ -16,18 +16,19 @@ const AppHeader = () => {
   const location = useLocation();
 
   return (
-    <header className="relative z-50 flex items-center justify-between h-16 px-6 border-b border-border"
+    <header className="relative z-50 flex items-center justify-between h-20 px-8 border-b border-border"
       style={{
-        background: "linear-gradient(180deg, hsl(220 25% 10%) 0%, hsl(220 25% 6%) 100%)",
+        background: "linear-gradient(180deg, hsl(220 25% 12%) 0%, hsl(220 25% 6%) 100%)",
+        boxShadow: "0 4px 30px hsl(185 100% 50% / 0.05), inset 0 1px 0 hsl(185 100% 50% / 0.08)",
       }}
     >
       {/* Nav items - left */}
-      <nav className="flex items-center gap-1 flex-1">
+      <nav className="flex items-center gap-0 flex-1">
         {navItems.map((item) => (
           <NavLink
             key={item.path}
             to={item.path}
-            className={`header-nav-item whitespace-nowrap ${
+            className={`header-nav-item flex-1 text-center whitespace-nowrap ${
               location.pathname === item.path ? "active" : ""
             }`}
           >
@@ -37,15 +38,15 @@ const AppHeader = () => {
       </nav>
 
       {/* Title - right */}
-      <div className="flex items-center gap-3 ml-6 shrink-0">
-        <Activity className="w-5 h-5 text-primary" style={{ filter: "drop-shadow(0 0 6px hsl(185 100% 50% / 0.5))" }} />
-        <div className="flex items-center gap-2">
-          <Shield className="w-6 h-6 text-primary" style={{ filter: "drop-shadow(0 0 8px hsl(185 100% 50% / 0.6))" }} />
-          <h1 className="font-display text-lg font-bold tracking-wider glow-text">
+      <div className="flex items-center gap-4 ml-8 shrink-0">
+        <Activity className="w-6 h-6 text-primary" style={{ filter: "drop-shadow(0 0 8px hsl(185 100% 50% / 0.5))" }} />
+        <div className="flex items-center gap-3">
+          <Shield className="w-8 h-8 text-primary" style={{ filter: "drop-shadow(0 0 10px hsl(185 100% 50% / 0.6))" }} />
+          <h1 className="font-display text-2xl font-bold tracking-widest glow-text">
             交通安全系统
           </h1>
         </div>
-        <div className="pulse-dot ml-2" />
+        <div className="pulse-dot ml-3" />
       </div>
 
       {/* Bottom glow line */}
